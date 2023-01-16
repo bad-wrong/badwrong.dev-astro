@@ -1,13 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
 import BalticEnergy from "../components/BalticEnergy.astro";
 import PublicRecords from "../components/PublicRecords.astro";
 ---
 
 <Layout title="Bad & Wrong">
-	<Header />
 	<main>
 		<div class="flex flex-grow flex-col justify-center">
 			<section class="grid md:grid-cols-2 gap-x-8 gap-y-32 my-16 md:my-8">
@@ -16,7 +13,6 @@ import PublicRecords from "../components/PublicRecords.astro";
 			</section>
 		</div>
 	</main>
-	<Footer />
 </Layout>
 
 <style></style>
