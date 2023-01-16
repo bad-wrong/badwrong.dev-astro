@@ -1,81 +1,73 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import ProductCard from "../components/ProductCard.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+	<Header />
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<div class="flex flex-grow flex-col justify-center">
+			<section class="grid md:grid-cols-2 gap-x-8 gap-y-32 my-16 md:my-8">
+				<ProductCard>
+					<h1 slot="description">
+						<a href="/baltic-energy/"
+							>Electricity and natural gas market prices at your
+							wristwatch</a
+						>
+					</h1>
+					<a
+						href="/baltic-energy/"
+						title="Baltic Energy Apple Watch Application"
+						slot="image"
+					>
+						<img
+							src="/Baltic-Energy/v1.2/CurrentHour-44mm.png"
+							srcset="/Baltic-Energy/v1.2/CurrentHour-44mm.png 1x, /Baltic-Energy/v1.2/CurrentHour-44mm@2x.png 2x"
+							alt="Energy Live Apple Watch App"
+						/>
+					</a>
+					<a
+						href="/baltic-energy/"
+						title="Baltic Energy Apple Watch Application"
+						slot="app-name"
+					>
+						<div class="flex items-center justify-center -ml-8">
+							<img
+								class="object-scale-down h-12 mx-3"
+								src="/Baltic-Energy/BalticEnergy.png"
+								srcset="/Baltic-Energy/BalticEnergy.png 1x, /Baltic-Energy/BalticEnergy@2x.png 2x"
+								alt="Baltic Energy App Icon"
+							/>
+							<span class="font-extrabold">Baltic Energy</span>
+						</div>
+					</a>
+					<p slot="tagline">
+						<small
+							>Works in Estonia, Finland, Latvia and Lithuania</small
+						>
+					</p>
+					<div slot="badge">
+						<a
+							href="https://apps.apple.com/us/app/baltic-energy/id1607203216"
+							title="Get on App Store"
+						>
+							<img
+								src="/Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+								alt="Download on App Store"
+							/>
+						</a>
+					</div>
+					<a
+						class="font-normal opacity-50 hover:opacity-100"
+						href="baltic-energy/privacy">Privacy Policy</a
+					>
+				</ProductCard>
+			</section>
+		</div>
 	</main>
+	<Footer />
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<style></style>
