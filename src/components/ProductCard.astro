@@ -3,15 +3,15 @@
 
 <article class="flex flex-col items-center font-ligth text-5xl p-8">
     <div
-        class="title-leading uppercase text-center max-w-xl lg:max-w-3xl leading-none tracking-wider"
+        class="description title-leading uppercase text-center max-w-xl lg:max-w-3xl leading-none tracking-wider"
     >
         <slot name="description" />
     </div>
-    <div class="flex items-center min-h-[10em] my-8">
+    <div class="flex items-center">
         <slot name="image" />
     </div>
     <section class="text-center mb-4">
-        <div>
+        <div class="app-name">
             <slot name="app-name" />
         </div>
         <div class="font-normal text-3xl leading-none my-2">

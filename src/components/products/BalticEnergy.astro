@@ -12,8 +12,15 @@ import ProductCard from "../ProductCard.astro";
         href="/baltic-energy/"
         title="Baltic Energy Apple Watch Application"
         slot="image"
+        class="new-label-container"
     >
+        <!-- <div
+            class="new-label uppercase text-center text-7xl leading-none text-white font-light tracking-wide bg-black border-8 border-red-500 opacity-95 px-16"
+        >
+            Retracted
+        </div> -->
         <img
+            class="my-2"
             src="/images/Baltic-Energy/v1.2/CurrentHour-44mm.png"
             srcset="/images/Baltic-Energy/v1.2/CurrentHour-44mm.png 1x, /images/Baltic-Energy/v1.2/CurrentHour-44mm@2x.png 2x"
             alt="Energy Live Apple Watch App"
@@ -56,3 +63,15 @@ import ProductCard from "../ProductCard.astro";
         href="baltic-energy/privacy">Privacy Policy</a
     >
 </ProductCard>
+
+<style>
+    .new-label {
+        position: absolute;
+    }
+
+    .new-label-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

@@ -4,24 +4,23 @@ import ProductCard from "../ProductCard.astro";
 
 <ProductCard>
     <h1 slot="description">Public domain knowledge<br />one tap away</h1>
-    <a
+    <span
         slot="image"
         class="new-label-container"
-        href="https://testflight.apple.com/join/BAJbksoF"
         title="Public Records iOS Application Public Beta-Testing"
     >
-        <div
-            class="new-label uppercase text-center text-7xl leading-none text-white font-light bg-red-500 opacity-95"
+        <!-- <div
+            class="new-label uppercase text-center text-7xl leading-none text-white tracking-wide font-light bg-black border-8 border-red-500 opacity-95 px-16"
         >
-            PUBLIC BETA TESTING
-        </div>
+            SHELVED
+        </div> -->
         <img
-            class="iphone"
+            class="iphone my-6"
             src="/images/Public-Records/PublicRecords-Browse-iPhone11.jpg"
             srcset="/images/Public-Records/PublicRecords-Browse-iPhone11.jpg 1x, /images/Public-Records/PublicRecords-Browse-iPhone11@2x.jpg 2x"
             alt="Public Records iOS App"
         />
-    </a>
+    </span>
     <div
         slot="app-name"
         class="flex md:flex-row sm:flex-col items-center justify-center md:-ml-8"
