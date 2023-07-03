@@ -16,3 +16,5 @@ puts(`cd #{target_dir} && git add -A . && git commit -m "Deployed at #{Time.now}
 puts(`cd #{target_dir} && git push origin main`)
 
 puts "🚀 Done!"
+puts "🔗 https://badwrong.dev"
+
