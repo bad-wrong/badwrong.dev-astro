@@ -3,5 +3,10 @@ import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  integrations: [vue(), tailwind()],
+  integrations: [
+    vue(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
 });
