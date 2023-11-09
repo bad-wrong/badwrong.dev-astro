@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Footer from "../components/Footer.astro";
-import HeaderBar from "../components/HeaderBar.tsx";
+import FooterBar from "../components/FooterBar";
+import HeaderBar from "../components/HeaderBar";
 import "../styles/base.css";
 
 const { title } = Astro.props;
@@ -20,6 +20,6 @@ const { title } = Astro.props;
   <body>
     <HeaderBar />
     <slot />
-    <Footer />
+    <FooterBar client:only="react" />
   </body>
 </html>
