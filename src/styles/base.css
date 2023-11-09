@@ -16,7 +16,8 @@
 
   a:hover,
   a:active {
-    @apply text-blue-800;
+    /* @apply text-blue-600; */
+    color: blue;
     @apply transition-colors duration-200;
   }
 }
