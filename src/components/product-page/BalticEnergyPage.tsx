@@ -47,9 +47,9 @@ export default function BalticEnergyPage() {
         />
       </div>
 
-      <div className="flex rounded-md shadow mb-6">
+      <div className="flex mb-6">
         <a
-          className="inline-flex items-center justify-center px-6 py-3 text-xl font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 hover:text-white"
+          className="inline-flex items-center justify-center px-6 py-3 text-xl font-medium rounded-full text-white hover:text-white active:text-white bg-emerald-500 hover:bg-emerald-600 "
           href="https://apps.apple.com/us/app/baltic-energy/id1607203216"
           title="Get on App Store"
         >
