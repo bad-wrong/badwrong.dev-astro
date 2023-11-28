@@ -17,19 +17,25 @@ export default function ProductCard({
 }) {
   return (
     <article className="flex flex-col items-center font-ligth text-5xl p-8">
-      <div
-        className="description leading-none uppercase text-center max-w-xl lg:max-w-3xl tracking-wide"
-        style={{ lineHeight: 1.15 }}
-      >
-        {description}
-      </div>
-      <div className="flex items-center">{image}</div>
+      {description && (
+        <div
+          className="description leading-none uppercase text-center max-w-xl lg:max-w-3xl tracking-wide"
+          style={{ lineHeight: 1.15 }}
+        >
+          {description}
+        </div>
+      )}
+      {image && <div className="flex items-center">{image}</div>}
       <section className="text-center mb-4">
         <div className="app-name">{appName}</div>
-        <div className="font-normal text-3xl leading-none my-2">{tagline}</div>
-        <div className="text-xl mt-6">{legal}</div>
+        {tagline && (
+          <div className="font-normal text-3xl leading-none my-2">
+            {tagline}
+          </div>
+        )}
+        {legal && <div className="text-xl mt-6">{legal}</div>}
       </section>
-      <div>{badge}</div>
+      {badge && <div>{badge}</div>}
     </article>
   );
 }
