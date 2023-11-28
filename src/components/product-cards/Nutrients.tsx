@@ -32,7 +32,7 @@ export default function Nuetrients() {
         <p>
           <small>
             Food database and nutritional information for thousands of food
-            items from Estonian grocery stores
+            items from Estonian grocery stores&nbsp;
             <span className="text-zinc-300">
               with the data from ©&nbsp;NutriData food composition database,
               version 12,

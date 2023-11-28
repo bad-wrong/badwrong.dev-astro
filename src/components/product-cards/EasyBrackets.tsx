@@ -9,11 +9,7 @@ export default function EasyBrackets() {
         </h1>
       }
       image={
-        <span
-          slot="image"
-          title="Nutrients application for macOS"
-          className="p-10 mt-4"
-        >
+        <span title="Nutrients application for macOS" className="p-10 mt-4">
           <MarketPlaceLink>
             <img
               src="/images/EasyBrackets/vscode.svg"
@@ -38,14 +34,12 @@ export default function EasyBrackets() {
         </div>
       }
       tagline={
-        <p>
-          <small>
-            Replaces brackets and quotes in a selection instead of inserting
-            a&nbsp;new pair.
-          </small>
-        </p>
+        <small>
+          Replaces brackets and quotes in a selection instead of inserting
+          a&nbsp;new pair.
+        </small>
       }
-      badge={<span slot="badge" title="Get on App Store"></span>}
+      badge={<span title="Get on App Store"></span>}
     />
   );
 }
