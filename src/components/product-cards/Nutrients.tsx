@@ -2,11 +2,11 @@ import ProductCard from "./ProductCard";
 
 export default function Nuetrients() {
   return (
-    <ProductCard
-      description={
-        <h1>Nutritional information for the food in your grocery store</h1>
-      }
-      image={
+    <ProductCard>
+      <ProductCard.Description>
+        Nutritional information for the food in your grocery store
+      </ProductCard.Description>
+      <ProductCard.Image>
         <span slot="image" title="Nutrients application for macOS">
           <img
             className="my-2"
@@ -15,43 +15,46 @@ export default function Nuetrients() {
             alt="Nutrients application for macOS"
           />
         </span>
-      }
-      appName={
-        <div className="flex md:flex-row sm:flex-col items-center justify-center">
-          <img
-            className="icon object-scale-down h-12 mx-3"
-            src="/images/Nutrients/Nutrients App Icon@2x.jpg"
-            alt="Public Records App Icon"
-          />
-          <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
-            Nutrients
-          </span>
-        </div>
-      }
-      tagline={
-        <p>
-          <small>
-            Food database and nutritional information for thousands of food
-            items from Estonian grocery stores&nbsp;
-            <span className="text-zinc-300">
-              with the data from ©&nbsp;NutriData food composition database,
-              version 12,
-              <a href="https://tka.nutridata.ee/en/">tka.nutridata.ee</a>, 2023
+      </ProductCard.Image>
+      <ProductCard.AppDetails
+        appName={
+          <div className="flex md:flex-row sm:flex-col items-center justify-center">
+            <img
+              className="icon object-scale-down h-12 mx-3"
+              src="/images/Nutrients/Nutrients App Icon@2x.jpg"
+              alt="Public Records App Icon"
+            />
+            <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
+              Nutrients
             </span>
-          </small>
-        </p>
-      }
-      legal={
-        <div slot="legal" className="flex flex-row justify-center">
-          <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
-            Agreement
-          </span>
-          <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
-            Privacy Policy
-          </span>
-        </div>
-      }
-      badge={
+          </div>
+        }
+        tagline={
+          <p>
+            <small>
+              Food database and nutritional information for thousands of food
+              items from Estonian grocery stores&nbsp;
+              <span className="text-zinc-300">
+                with the data from ©&nbsp;NutriData food composition database,
+                version 12,
+                <a href="https://tka.nutridata.ee/en/">tka.nutridata.ee</a>,
+                2023
+              </span>
+            </small>
+          </p>
+        }
+        legal={
+          <div slot="legal" className="flex flex-row justify-center">
+            <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
+              Agreement
+            </span>
+            <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
+              Privacy Policy
+            </span>
+          </div>
+        }
+      />
+      <ProductCard.Badge>
         <span slot="badge" title="Get on App Store">
           <img
             className="opacity-20"
@@ -59,7 +62,7 @@ export default function Nuetrients() {
             alt="Download on App Store"
           />
         </span>
-      }
-    />
+      </ProductCard.Badge>
+    </ProductCard>
   );
 }

@@ -2,13 +2,13 @@ import ProductCard from "./ProductCard";
 
 export default function BalticEnergy() {
   return (
-    <ProductCard
-      description={
+    <ProductCard>
+      <ProductCard.Description>
         <a href="/baltic-energy/">
           Electricity and natural gas market prices at your wristwatch
         </a>
-      }
-      image={
+      </ProductCard.Description>
+      <ProductCard.Image>
         <a
           href="/baltic-energy/"
           title="Baltic Energy Apple Watch Application"
@@ -21,28 +21,41 @@ export default function BalticEnergy() {
             alt="Energy Live Apple Watch App"
           />
         </a>
-      }
-      appName={
-        <a href="/baltic-energy/" title="Baltic Energy Apple Watch Application">
-          <div className="flex flex-wrap items-center justify-center -ml-8">
-            <img
-              className="object-scale-down h-12 lg:h-14 mx-4 my-2"
-              src="/images/Baltic-Energy/BalticEnergy.png"
-              srcSet="/images/Baltic-Energy/BalticEnergy.png 1x, /images/Baltic-Energy/BalticEnergy@2x.png 2x"
-              alt="Baltic Energy App Icon"
-            />
-            <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
-              Baltic Energy
-            </span>
-          </div>
-        </a>
-      }
-      tagline={
-        <p>
-          <small>Works in Estonia, Finland, Latvia, and Lithuania</small>
-        </p>
-      }
-      badge={
+      </ProductCard.Image>
+      <ProductCard.AppDetails
+        appName={
+          <a
+            href="/baltic-energy/"
+            title="Baltic Energy Apple Watch Application"
+          >
+            <div className="flex flex-wrap items-center justify-center -ml-8">
+              <img
+                className="object-scale-down h-12 lg:h-14 mx-4 my-2"
+                src="/images/Baltic-Energy/BalticEnergy.png"
+                srcSet="/images/Baltic-Energy/BalticEnergy.png 1x, /images/Baltic-Energy/BalticEnergy@2x.png 2x"
+                alt="Baltic Energy App Icon"
+              />
+              <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
+                Baltic Energy
+              </span>
+            </div>
+          </a>
+        }
+        tagline={
+          <p>
+            <small>Works in Estonia, Finland, Latvia, and Lithuania</small>
+          </p>
+        }
+        legal={
+          <a
+            className="font-normal opacity-50 hover:opacity-100"
+            href="baltic-energy/privacy"
+          >
+            Privacy Policy
+          </a>
+        }
+      />
+      <ProductCard.Badge>
         <div>
           <a
             href="https://apps.apple.com/us/app/baltic-energy/id1607203216"
@@ -54,15 +67,7 @@ export default function BalticEnergy() {
             />
           </a>
         </div>
-      }
-      legal={
-        <a
-          className="font-normal opacity-50 hover:opacity-100"
-          href="baltic-energy/privacy"
-        >
-          Privacy Policy
-        </a>
-      }
-    />
+      </ProductCard.Badge>
+    </ProductCard>
   );
 }
