@@ -8,7 +8,7 @@ export default function FooterBar() {
   }
 
   return (
-    <footer className="lg:flex lg:items-baseline p-8 uppercase font-semibold tracking-widest space-y-4 md:space-y-6 lg:space-x-16">
+    <footer className="flex lg:flex lg:items-baseline p-8 uppercase font-semibold tracking-widest space-y-4 md:space-y-6 lg:space-x-16">
       <nav className="grid grid-flow-row md:grid-flow-col md:auto-cols-min gap-x-16 gap-y-4">
         <a className="border-b-2" href="/about">
           About
