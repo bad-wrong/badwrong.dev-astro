@@ -8,10 +8,10 @@ export default function PublicRecords() {
         one tap away
       </ProductCard.Description>
       <ProductCard.Image>
-        <span
-          slot="image"
+        <a
+          href="/public-records/"
           className="new-label-container"
-          title="Public Records iOS Application Public Beta-Testing"
+          title="Public Records iOS Application"
         >
           <img
             className="max-w-sm my-6"
@@ -19,28 +19,27 @@ export default function PublicRecords() {
             srcSet="/images/Public-Records/PublicRecords-Browse-iPhone11.jpg 1x, /images/Public-Records/PublicRecords-Browse-iPhone11@2x.jpg 2x"
             alt="Public Records iOS App"
           />
-        </span>
+        </a>
       </ProductCard.Image>
 
       <ProductCard.AppDetails
         appName={
-          <div
-            slot="app-name"
-            className="flex md:flex-row sm:flex-col items-center justify-center md:-ml-8"
-          >
-            <img
-              className="border-2 border-black rounded-xl object-scale-down h-12 mx-4"
-              src="/images/Public-Records/PublicRecords.png"
-              srcSet="/images/Public-Records/PublicRecords.png 1x, /images/Public-Records/PublicRecords@2x.png 2x"
-              alt="Public Records App Icon"
-            />
-            <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
-              Public Records
-            </span>
-          </div>
+          <a href="/public-records/" title="Public Records iOS Application">
+            <div className="flex flex-wrap items-center justify-center -ml-8">
+              <img
+                className="border-2 border-black rounded-xl object-scale-down h-12 mx-4"
+                src="/images/Public-Records/PublicRecords.png"
+                srcSet="/images/Public-Records/PublicRecords.png 1x, /images/Public-Records/PublicRecords@2x.png 2x"
+                alt="Public Records App Icon"
+              />
+              <span className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
+                Public Records
+              </span>
+            </div>
+          </a>
         }
         tagline={
-          <p slot="tagline">
+          <p>
             <small>
               Listen to publicly available audiobooks narrated by volunteers of{" "}
               <a href="https://librivox.org">"LibriVox"</a>
@@ -48,20 +47,17 @@ export default function PublicRecords() {
           </p>
         }
         legal={
-          <div slot="legal" className="flex flex-row justify-center">
-            <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
-              Agreement
-            </span>
-            <span className="font-normal opacity-20 hover:opacity-100 mx-4 line-through">
-              Privacy Policy
-            </span>
-          </div>
+          <a
+            href="/public-records/privacy"
+            className="font-normal opacity-50 hover:opacity-100"
+          >
+            Privacy Policy
+          </a>
         }
       />
       <ProductCard.Badge>
-        <span slot="badge" title="Get on App Store">
+        <span title="Get on App Store">
           <img
-            className="opacity-20"
             src="/images/Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
             alt="Download on App Store"
           />
