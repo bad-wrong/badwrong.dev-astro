@@ -4,8 +4,10 @@ export default function PublicRecords() {
   return (
     <ProductCard>
       <ProductCard.Description>
-        Public domain knowledge <br />
-        one tap away
+        <a href="/public-records/">
+          Public domain knowledge <br />
+          one tap away
+        </a>
       </ProductCard.Description>
       <ProductCard.Image>
         <a
