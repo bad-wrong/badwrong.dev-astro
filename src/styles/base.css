@@ -14,9 +14,12 @@
     @apply flex flex-col min-h-full;
   }
 
+  p a {
+    @apply border-b border-b-2 border-black;
+  }
+
   a:hover,
   a:active {
-    /* @apply text-blue-600; */
     color: blue;
     @apply transition-colors duration-200;
   }

@@ -11,13 +11,12 @@ export default function PublicRecordsPage() {
       />
 
       <div className="flex mb-6">
-        <a
+        <span
           className="px-6 py-3 text-xl font-medium rounded-full text-white hover:text-white active:text-white bg-black hover:bg-black/80"
-          href="https://apps.apple.com/us/app/baltic-energy/id1607203216"
           title="Get on App Store"
         >
           Get on App Store
-        </a>
+        </span>
       </div>
     </main>
   );
@@ -36,12 +35,12 @@ function PageHeader() {
         <h1 className="text-4xl sm:text-5xl font-extrabold">Public Records</h1>
       </div>
       <p className="text-2xl sm:text-3xl my-6 leading-normal max-w-4xl">
-        Got tired of losing your place in a book using{" "}
+        Got tired of losing your book progress using{" "}
         <a href="https://librivox.org/">LibriVox</a> and manually downloading
         audio files to your iPhone?
       </p>
       <p className="text-2xl sm:text-3xl mt-2 mb-8 leading-normal max-w-4xl">
-        Try <em>Public Records</em> that does all that work for you.
+        <em>Public Records</em> does all that work for you.
       </p>
       <span className="text-xl font-normal">Version 1.0</span>
       <a
@@ -50,16 +49,12 @@ function PageHeader() {
       >
         Privacy Policy
       </a>
-      <a
-        className="mt-6"
-        href="https://apps.apple.com/us/app/baltic-energy/id1607203216"
-        title="Get on App Store"
-      >
+      <span className="mt-6" title="Get on App Store">
         <img
           src="/images/Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
           alt="Download on App Store"
         />
-      </a>
+      </span>
     </div>
   );
 }
