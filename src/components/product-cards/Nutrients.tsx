@@ -36,7 +36,7 @@ export default function Nuetrients() {
               items from Estonian grocery stores&nbsp;
               <span className="text-zinc-300">
                 with the data from ©&nbsp;NutriData food composition database,
-                version 12,
+                version 12,{" "}
                 <a href="https://tka.nutridata.ee/en/">tka.nutridata.ee</a>,
                 2023
               </span>

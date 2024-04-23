@@ -15,7 +15,7 @@
   }
 
   p a {
-    @apply border-b border-b-2 border-black;
+    @apply border-b-2 border-gray-200 leading-relaxed;
   }
 
   a:hover,
