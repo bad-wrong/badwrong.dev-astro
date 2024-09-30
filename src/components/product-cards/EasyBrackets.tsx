@@ -4,7 +4,9 @@ export default function EasyBrackets() {
   return (
     <ProductCard>
       <ProductCard.Description>
-        Visual Studio Code extension for manipulating brackets and quotes
+        <a href="https://marketplace.visualstudio.com/items?itemName=badwrong.easybrackets">
+          Visual Studio Code extension for manipulating brackets and quotes
+        </a>
       </ProductCard.Description>
       <ProductCard.Image>
         <span title="Nutrients application for macOS" className="p-10 mt-4">

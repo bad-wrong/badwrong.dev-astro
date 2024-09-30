@@ -20,7 +20,7 @@
 
   a:hover,
   a:active {
-    color: blue;
+    color: #1E64E6;
     @apply transition-colors duration-200;
   }
 }
