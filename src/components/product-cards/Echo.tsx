@@ -20,6 +20,11 @@ export default function Echo() {
       <ProductCard.AppDetails
         appName={
           <div className="flex md:flex-row sm:flex-col items-center justify-center">
+            <img
+              className="icon object-scale-down h-12 mx-3"
+              src="/images/Echo/icon@2x.png"
+              alt="Public Records App Icon"
+            />
             <a href="/echo/" className="font-extrabold leading-none my-4 text-4xl lg:text-5xl">
               Echo
             </a>
