@@ -4,12 +4,14 @@ import EasyBrackets from "../components/product-cards/EasyBrackets";
 import NutrientsReact from "../components/product-cards/Nutrients";
 import PublicRecords from "../components/product-cards/PublicRecords";
 import Layout from "../layouts/Layout.astro";
+import Echo from "../components/product-cards/Echo";
 ---
 
 <Layout title="Bad & Wrong">
   <main>
     <div class="flex flex-grow flex-col justify-center">
       <section class="grid md:grid-cols-2 gap-x-8 gap-y-32 my-16 md:my-8">
+        <Echo />
         <EasyBrackets />
         <NutrientsReact />
         <BalticEnergy />

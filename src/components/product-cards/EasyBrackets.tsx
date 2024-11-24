@@ -37,7 +37,7 @@ export default function EasyBrackets() {
         tagline={
           <small>
             Replaces brackets and quotes in a selection instead of inserting
-            a&nbsp;new pair.
+            a&nbsp;new pair
           </small>
         }
       />
