@@ -1,10 +1,11 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import FooterBar from "../components/nav/FooterBar";
 import HeaderBar from "../components/nav/HeaderBar";
 import "../styles/base.css";
 
-const { title, description, ogTitle, ogDescription, ogImage, twitterImage } = Astro.props;
+const { title, description, ogTitle, ogDescription, ogImage, twitterImage } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -17,10 +18,14 @@ const { title, description, ogTitle, ogDescription, ogImage, twitterImage } = As
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     {ogTitle && <meta property="og:title" content={ogTitle} />}
-    {ogDescription && <meta property="og:description" content={ogDescription} />}
+    {
+      ogDescription && (
+        <meta property="og:description" content={ogDescription} />
+      )
+    }
     {ogImage && <meta property="og:image" content={ogImage} />}
     {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <HeaderBar />
