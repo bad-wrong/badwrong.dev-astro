@@ -1,7 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import FooterBar from "../components/nav/FooterBar";
-import HeaderBar from "../components/nav/HeaderBar";
+import "../styles/custom.css";
 
 const { title, description, ogTitle, ogDescription, ogImage, twitterImage } =
   Astro.props;
@@ -25,10 +24,10 @@ const { title, description, ogTitle, ogDescription, ogImage, twitterImage } =
     {ogImage && <meta property="og:image" content={ogImage} />}
     {twitterImage && <meta name="twitter:image" content={twitterImage} />}
     <ClientRouter />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
-  <body>
-    <HeaderBar />
+  <body class="wrapper">
     <slot />
-    <FooterBar client:only="react" />
   </body>
 </html>

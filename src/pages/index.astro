@@ -1,24 +1,39 @@
 ---
-import BalticEnergy from "../components/product-cards/BalticEnergy";
-import EasyBrackets from "../components/product-cards/EasyBrackets";
-import NutrientsReact from "../components/product-cards/Nutrients";
-import PublicRecords from "../components/product-cards/PublicRecords";
-import Layout from "../layouts/Layout.astro";
-import Echo from "../components/product-cards/Echo";
-import JohnDoe from "../components/product-cards/JohnDoe"
+import Layout2 from "../layouts/Layout2.astro";
+import { ProjectCard } from "../v2/components/ProjectCard.tsx";
 ---
 
-<Layout title="Bad & Wrong">
-  <main>
-    <div class="flex flex-grow flex-col justify-center">
-      <section class="grid md:grid-cols-2 gap-x-8 gap-y-32 my-16 md:my-8">
-        <JohnDoe />
-        <Echo />
-        <EasyBrackets />
-        <NutrientsReact />
-        <BalticEnergy />
-        <PublicRecords />
-      </section>
-    </div>
+<Layout2 title="Bad & Wrong">
+  <div class="running-text-container">
+    <p class="running-text">
+      <em>Bad & Wrong</em> is a one-person software engineering shop based in Tartu,
+      founded in 2021 by Ihar Suvorau. If you are interested in a collaboration,
+      please contact at <em>info@badwrong.dev</em>.
+    </p>
+  </div>
+  <main id="projects">
+    <header>
+      <h1>Bad<span id="ampersand">&</span>Wrong</h1>
+    </header>
+    <ProjectCard
+      rowSpan={6}
+      heading="AI-assisted resume tuning to help your resume rank better in applicant tracking systems"
+    />
+    <ProjectCard
+      heading="Visual Studio Code extension to replace brackets and quotes instead of inserting a new pair"
+    />
+    <ProjectCard
+      heading="Apple Music to Spotify service to transfer playlists between music providers"
+    />
+    <ProjectCard
+      heading="Food and nutritional database from Estonian grocery stores"
+    />
+    <ProjectCard
+      rowSpan={6}
+      heading="Electricity and natural gas market prices for Estonia, Finland, Latvia, and Lithuania"
+    />
+    <ProjectCard
+      heading={`Publicly available audiobooks by volunteers of "LibriVox"`}
+    />
   </main>
-</Layout>
+</Layout2>
