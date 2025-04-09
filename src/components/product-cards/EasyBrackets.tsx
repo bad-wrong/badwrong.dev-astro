@@ -9,7 +9,7 @@ export default function EasyBrackets() {
         </a>
       </ProductCard.Description>
       <ProductCard.Image>
-        <span title="Nutrients application for macOS" className="p-10 mt-4">
+        <span title="VSCode plugin" className="p-10 mt-4">
           <MarketPlaceLink>
             <img
               src="/images/EasyBrackets/vscode.svg"
