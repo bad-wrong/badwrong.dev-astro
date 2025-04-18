@@ -16,8 +16,16 @@
   /* fix for Chrome */
   font-feature-settings: 'liga' 1, 'calt' 1;
 
-  --column: 320px;
+  --column: 315px;
   --row: 190px;
+
+  /* iphone 12 */
+  @media (max-width: 428px) {
+    --column: 155px;
+    --row: 92px;
+
+    font-size: 1.25em;
+  }
 }
 
 h1,
@@ -49,15 +57,23 @@ body {
 }
 
 body {
-  background-color: #1d1d1d;
+  /* background-color: #1d1f1f; */
+  /* color: #ccc; */
+
+  /* background-color: white; */
+  /* color: black; */
+
+  background-color: black;
+  color: white;
+
   font-size: 1em;
   line-height: 1.5em;
-  color: #ccc;
 }
 
 .wrapper {
   padding: 2rem;
   display: flex;
+  flex-direction: column;
 }
 
 #logotype-box {
@@ -122,7 +138,6 @@ body {
 }
 
 #projects {
-  margin-left: 1rem;
   width: 100%;
 
   display: grid;
@@ -131,34 +146,36 @@ body {
   grid-auto-columns: var(--column);
   grid-auto-rows: var(--row);
   grid-gap: 1rem;
-
-  /* justify-content: end; */
 }
 
 #projects>header {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 
-  display: flex;
-  align-items: end;
-
-  margin-bottom: 0.5rem;
-  margin-left: calc(var(--column) / 2);
+  /* display: flex; */
+  /* align-items: end; */
+  /**/
+  /* margin-bottom: 0.5rem; */
+  /* margin-left: calc(var(--column) / 2); */
 
   min-width: fit-content;
 
-  font-size: 6em;
-  /* line-height: 0.9em; */
-  align-content: end;
-  /* text-align: end; */
+  font-size: 5.4em;
+  line-height: 0.8em;
+  margin-left: -0.05em;
+  /* align-content: end; */
   z-index: 1;
   text-wrap: nowrap;
   letter-spacing: -0.05ex;
-  /* justify-content: space-evenly; */
+
+  @media (max-width: 428px) {
+    font-size: 2.75em;
+  }
 }
 
 #projects>header>h1 {
   margin: 0;
+  /* color: goldenrod; */
 }
 
 .inactive {
@@ -173,43 +190,104 @@ body {
   padding: 0 0.1ex 0 0.15ex;
 }
 
+/* Card Styles */
+
+/* grid positioning */
+
 .card {
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
-}
 
-.cover {
-  background-color: #333;
-
-  opacity: 0.2;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.card>h3 {
-  grid-column: 2 / 3;
-  grid-row: span 1;
-}
-
-.card-2x3 {
   grid-column: span 2;
   grid-row: span 3;
 }
 
-.card-2x3>.cover {
+.card .cover {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-.card-2x6 {
+.card--tall {
   grid-column: span 2;
   grid-row: span 6;
 }
 
-.card-2x6>.cover {
+.card--tall .cover {
   grid-column: span 2;
   grid-row: span 5;
+}
+
+/* looks */
+
+.card .cover {
+  text-align: center;
+  background-color: #111;
+  opacity: 0.6;
+
+  &:hover {
+    background-color: #222;
+    opacity: 1;
+  }
+}
+
+.card .cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.cover--fit-contain img {
+  object-fit: contain;
+}
+
+.cover--fit-cover img {
+  object-fit: cover;
+}
+
+.cover--fit-fill img {
+  object-fit: fill;
+}
+
+.cover--fit-none img {
+  object-fit: none;
+}
+
+.cover--fit-scale-down img {
+  object-fit: scale-down;
+}
+
+.card .card-content {
+  grid-column: 2 / 3;
+  grid-row: span 1;
+
+  @media (max-width: 428px) {
+    grid-column: 1 / 3;
+  }
+}
+
+/* About Styles */
+
+.about {
+  width: auto;
+  margin-top: calc(var(--row));
+  /* margin-left: calc(var(--column) / 2); */
+
+  @media (max-width: 980px) {
+    margin-left: 0;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--column));
+  grid-template-rows: repeat(auto-fill, var(--row));
+  grid-auto-columns: var(--column);
+  grid-auto-rows: var(--row);
+  grid-gap: 1rem;
+}
+
+.about>section {
+  grid-column: span 2;
+}
+
+.about>section>p:nth-child(n+2) {
+  text-indent: 1rem;
 }

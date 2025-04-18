@@ -4,36 +4,60 @@ import { ProjectCard } from "../v2/components/ProjectCard.tsx";
 ---
 
 <Layout2 title="Bad & Wrong">
-  <div class="running-text-container">
-    <p class="running-text">
-      <em>Bad & Wrong</em> is a one-person software engineering shop based in Tartu,
-      founded in 2021 by Ihar Suvorau. If you are interested in a collaboration,
-      please contact at <em>info@badwrong.dev</em>.
-    </p>
-  </div>
   <main id="projects">
     <header>
       <h1>Bad<span id="ampersand">&</span>Wrong</h1>
     </header>
     <ProjectCard
-      rowSpan={6}
-      heading="AI-assisted resume tuning to help your resume rank better in applicant tracking systems"
-    />
+      className="card--tall"
+      imageFit="contain"
+      image="/images/Public-Records/public-records-2.png"
+    >
+      <h3>Publicly available audiobooks narrated by LibriVox volunteers</h3>
+    </ProjectCard>
+    <ProjectCard>
+      <h3>
+        Visual Studio Code extension to replace brackets and quotes instead of
+        inserting a new pair
+      </h3>
+    </ProjectCard>
+    <ProjectCard>
+      <h3>
+        Apple Music to Spotify service to transfer playlists between music
+        providers
+      </h3>
+    </ProjectCard>
+    <ProjectCard>
+      <h3>Food and nutritional database from Estonian grocery stores</h3>
+    </ProjectCard>
     <ProjectCard
-      heading="Visual Studio Code extension to replace brackets and quotes instead of inserting a new pair"
-    />
-    <ProjectCard
-      heading="Apple Music to Spotify service to transfer playlists between music providers"
-    />
-    <ProjectCard
-      heading="Food and nutritional database from Estonian grocery stores"
-    />
-    <ProjectCard
-      rowSpan={6}
-      heading="Electricity and natural gas market prices for Estonia, Finland, Latvia, and Lithuania"
-    />
-    <ProjectCard
-      heading={`Publicly available audiobooks by volunteers of "LibriVox"`}
-    />
+      className="card--tall"
+      imageFit="cover"
+      image="/images/Baltic-Energy/BalticEnergy-complication@2x.jpg"
+    >
+      <h3>
+        Electricity and natural gas market prices for Estonia, Finland, Latvia,
+        and Lithuania
+      </h3>
+    </ProjectCard>
+    <ProjectCard>
+      <h3>
+        AI-assisted resume tuning to help your resume rank better in applicant
+        tracking systems
+      </h3>
+    </ProjectCard>
   </main>
+  <aside class="about">
+    <section>
+      <p>
+        <em>Bad & Wrong</em> is a&nbsp;one-person software engineering shop based
+        in&nbsp;Tartu, founded in 2021 by Ihar Suvorau.
+      </p>
+      <p>
+        If you are interested in a&nbsp;collaboration, please contact at&nbsp;<em
+          >info@badwrong.dev</em
+        >.
+      </p>
+    </section>
+  </aside>
 </Layout2>
