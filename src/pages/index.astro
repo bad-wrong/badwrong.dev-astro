@@ -7,6 +7,7 @@ import { ProjectCard } from "../v2/components/ProjectCard.tsx";
   <main id="projects">
     <header>
       <h1>Bad<span id="ampersand">&</span>Wrong</h1>
+      <!-- <p><em>Selected projects</em></p> -->
     </header>
     <ProjectCard
       className="card--tall"
@@ -32,8 +33,9 @@ import { ProjectCard } from "../v2/components/ProjectCard.tsx";
     </ProjectCard>
     <ProjectCard
       className="card--tall"
-      imageFit="cover"
-      image="/images/Baltic-Energy/BalticEnergy-complication@2x.jpg"
+      imageFit="contain"
+      imageWidth={55}
+      image="/images/Baltic-Energy/BalticEnergy-44mm@2x.png"
     >
       <h3>
         Electricity and natural gas market prices for Estonia, Finland, Latvia,

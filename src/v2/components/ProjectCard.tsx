@@ -6,22 +6,30 @@ interface ProjectCardProps {
 	image?: string;
 	imageAlt?: string
 	imageFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+	imageWidth?: number;
 	children?: React.ReactNode;
 
 }
 
-export const ProjectCard = ({ className, image, imageAlt = '', imageFit = 'cover', children }: ProjectCardProps) => {
-	const imageClasses = clsx('cover', imageFit && `cover--fit-${imageFit}`);
+export const ProjectCard = ({
+	className,
+	image,
+	imageAlt = '',
+	imageFit = 'cover',
+	imageWidth,
+	children
+}: ProjectCardProps) => {
+	const imageClasses = clsx('cover', imageFit && `cover--fit-${imageFit}`, imageWidth && `cover--width-${imageWidth}`);
 
 	const cardClasses = clsx('card', className || "");
 
 	return (
 		<div className={cardClasses}>
-			<div className={imageClasses}>
+			<picture className={imageClasses}>
 				{image && (
 					<img src={image} alt={imageAlt} />
 				)}
-			</div>
+			</picture>
 			<div className="card-content">
 				{children}
 			</div>
