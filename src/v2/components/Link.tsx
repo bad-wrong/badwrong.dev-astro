@@ -1,4 +1,4 @@
-import { ExternalLink, SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 interface LinkProps {
 	external: boolean;

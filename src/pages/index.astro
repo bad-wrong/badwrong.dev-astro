@@ -2,6 +2,7 @@
 import Layout2 from "../layouts/Layout2.astro";
 import { ProjectCard } from "../v2/components/ProjectCard.tsx";
 import { Link } from "../v2/components/Link.tsx";
+import { VSCodeMarketplaceInstalls } from "../v2/components/VSCodeMarketplaceInstalls.tsx";
 ---
 
 <Layout2 title="Bad & Wrong">
@@ -22,17 +23,18 @@ import { Link } from "../v2/components/Link.tsx";
       ]}
     >
       <h3>Publicly available audiobooks narrated by LibriVox volunteers</h3>
-      <footer>iOS programming</footer>
+      <!-- <footer>iOS programming</footer> -->
     </ProjectCard>
     <ProjectCard
       client:load
       images={["/images/EasyBrackets/vscode.svg"]}
       imageFit="contain"
       imageWidth={40}
+      imageLink="https://marketplace.visualstudio.com/items?itemName=badwrong.easybrackets"
     >
       <h3>
         Visual Studio Code extension to replace brackets and quotes instead of
-        inserting a new pair
+        inserting a&nbsp;new pair
       </h3>
       <footer>
         <Link
@@ -41,49 +43,8 @@ import { Link } from "../v2/components/Link.tsx";
           href="https://marketplace.visualstudio.com/items?itemName=badwrong.easybrackets"
           external={true}
         />
+        <VSCodeMarketplaceInstalls client:load />
       </footer>
-    </ProjectCard>
-    <ProjectCard client:load coverText="johndoe.work">
-      <h3>
-        AI-assisted resume tuning to help your resume rank better in applicant
-        tracking systems
-      </h3>
-      <footer>
-        <Link
-          href="https://johndoe.work"
-          text="Go to johndoe.work"
-          external={true}
-        />
-        <p>SaaS development, Stripe, Go, Gemini AI</p>
-      </footer>
-    </ProjectCard>
-    <ProjectCard
-      client:load
-      className="card--full"
-      video="/video/Echo/Screencast.mp4"
-    >
-      <h3>
-        Apple Music to Spotify service to transfer playlists between music
-        providers
-      </h3>
-      <footer>SaaS development, Stripe payment, Go, HTMX</footer>
-    </ProjectCard>
-    <ProjectCard
-      client:load
-      className="card--full"
-      imageFit="contain"
-      imageAlt="Nutrients macOS application with nutritional data for Estonian groceries"
-      images={[
-        "/images/Nutrients/Nutrients-1@2x.png",
-        "/images/Nutrients/Nutrients-2@2x.png",
-        "/images/Nutrients/Nutrients-3@2x.png",
-      ]}
-    >
-      <h3>
-        Food and nutritional database for groceries in&nbsp;Estonia with data
-        from the Institute for Health Development
-      </h3>
-      <footer>macOS programming</footer>
     </ProjectCard>
     <ProjectCard
       client:load
@@ -100,7 +61,53 @@ import { Link } from "../v2/components/Link.tsx";
         Electricity and natural gas market prices for Estonia, Finland, Latvia,
         and Lithuania
       </h3>
-      <footer>Apple Watch programming</footer>
+      <!-- <footer>Apple Watch programming</footer> -->
+    </ProjectCard>
+    <ProjectCard
+      client:load
+      coverText="johndoe.work"
+      imageLink="https://johndoe.work"
+    >
+      <h3>
+        AI-assisted resume tuning to help your resume rank better in applicant
+        tracking systems
+      </h3>
+      <footer>
+        <Link
+          href="https://johndoe.work"
+          text="Go to johndoe.work"
+          external={true}
+        />
+        <p>SaaS development, Stripe, Go, Gemini AI</p>
+      </footer>
+    </ProjectCard>
+    <ProjectCard
+      client:load
+      className="card--full"
+      imageFit="contain"
+      imageAlt="Nutrients macOS application with nutritional data for Estonian groceries"
+      images={[
+        "/images/Nutrients/Nutrients-1@2x.png",
+        "/images/Nutrients/Nutrients-2@2x.png",
+        "/images/Nutrients/Nutrients-3@2x.png",
+      ]}
+    >
+      <h3>
+        Food and nutritional database of groceries in&nbsp;Estonia with data
+        from the Institute for Health Development
+      </h3>
+      <!-- <footer>macOS programming</footer> -->
+    </ProjectCard>
+    <ProjectCard
+      client:load
+      className="card--full"
+      video="/video/Echo/Screencast.mp4"
+    >
+      <h3>
+        Apple Music to Spotify service to transfer playlists between music
+        providers
+      </h3>
+      <footer>SaaS development, Stripe payment, Go, HTMX</footer>
     </ProjectCard>
   </main>
   <aside class="about">

@@ -1,6 +1,6 @@
 import type React from "react";
 import { clsx } from "../../utils/common";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { VideoPlayer } from "./VideoPlayer";
 
 interface ProjectCardProps {
@@ -9,6 +9,7 @@ interface ProjectCardProps {
 	imageAlt?: string
 	imageFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
 	imageWidth?: number;
+	imageLink?: string;
 	video?: string;
 	coverText?: string;
 	children?: React.ReactNode;
@@ -20,6 +21,7 @@ export const ProjectCard = ({
 	imageAlt = '',
 	imageFit = 'cover',
 	imageWidth,
+	imageLink,
 	video,
 	coverText,
 	children
@@ -28,22 +30,42 @@ export const ProjectCard = ({
 	const cardClasses = clsx('card', className || "");
 
 	const [curImgIdx, setImgIdx] = useState(0);
+	const [cursorStyle, setCursorStyle] = useState<string>("auto");
 
 	const handleClick = () => {
 		setImgIdx((curImgIdx + 1) % images.length);
+
+		if (imageLink) {
+			window.open(imageLink);
+		}
 	};
+
+	useEffect(() => {
+		if (images.length > 1) {
+			setCursorStyle("e-resize");
+		} else if (imageLink) {
+			setCursorStyle("pointer");
+		} else {
+			setCursorStyle("auto");
+		}
+	}, [imageLink]);
+
+
 
 	return (
 		<article className={cardClasses}>
-			<picture onClick={handleClick} className={imageClasses} style={{ cursor: images.length > 1 ? "e-resize" : "auto" }}>
+			<picture onClick={handleClick} className={imageClasses} style={{ cursor: cursorStyle }}>
 				{images && images.length > 0 && (
-					<img src={images[curImgIdx]} alt={imageAlt} />
+					<>
+						<img src={images[curImgIdx]} alt={imageAlt} />
+					</>
 				)}
 				{video && (
 					<VideoPlayer videoSrc={video} />
 				)}
 				{coverText && (<div className="cover-text">{coverText}</div>)}
 			</picture>
+			{images.length > 1 && (<div className="picture-number">{curImgIdx + 1} / {images.length}</div>)}
 			{children}
 		</article>
 	);

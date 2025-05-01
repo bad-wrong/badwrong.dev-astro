@@ -24,6 +24,7 @@ export function VideoPlayer({ videoSrc, ...props }: VideoPlayerProps) {
 			muted
 			loop
 			playsInline
+			controls
 			{...props}
 		></video>
 	);
